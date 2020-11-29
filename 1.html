@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>30 css selectors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Basic Selector</h1>
+    <pre class="language-css"><span class="rule">*</span> {
+    <span class="property">margin</span>: 0px;
+    <span class="property">padding</span>: 0px;
+}</pre>
+ <p>Ulduz isaresi sehifedeki butun elementleri secir.Daya cox bundan sehifedeki margin ve paddingleri sifirlamaq ucun isdifade edirler</p>
+ <!--<pre class="language-css"><span class="rule">#languages *</span> {
+    <span class="property">border</span>: 1px solid green;
+}</pre>
+<p>Bu #languages id li div in icindeki butun elementleri secir</p>-->
+<h1>Id Selector</h1>
+<pre class="language-css"><span class="rule">#conteiner</span> {
+    <span class="property">width</span>: 570px;
+    <span class="property">height</span>: 100px;
+    <span class="property">padding-left</span>: 10px;
+}</pre>
+<p>id atributuna css vermek ucun diyesden(#) istifade olunur</p>
+<h1>Class Selector</h1>
+<pre class="language-css"><span class="rule">.conteiner</span> {
+    <span class="property">width</span>: 570px;
+    <span class="property">height</span>: auto;
+    <span class="property">margin</span>: auto;
+}</pre>
+<p>class atributuna css vermek ucun noqteden(.) istifade olunur</p>
+<h1>Element Selector</h1>
+<pre class="language-css"><span class="rule">div</span> {
+    <span class="property">background-color</span>: black;
+    <span class="property">color</span>: red;
+}</pre>
+<pre class="language-css"><span class="rule">ul</span> {
+    <span class="property">margin-left</span>: 0px;
+}</pre>
+<pre class="language-css"><span class="rule">a</span> {
+    <span class="property">text-decoration</span>: none;
+    <span class="property">color</span>: blue;
+}</pre>
+<p>Her bir elemente bele css vermek olar</p>
+<h1>Combinator Selector</h1>
+<pre class="language-css"><span class="rule">ul li</span> {
+    <span class="property">font-size</span>: 10px;
+    <span class="property">text-align</span>:right;
+}</pre>
+<p>Burda css ul taginin icindeki li tagini secir.</p>
+<pre class="language-css"><span class="rule">ul + p</span> {
+    <span class="property">color</span>: red;
+}</pre>
+<p>Burda css ul-den sonraki p-ni qirmizi reng edecek</p>
+<pre class="language-css"><span class="rule">div#conteiner > ul</span> {
+    <span class="property">width</span>: 570px;
+}</pre>
+<p>Burda css id-si conteiner olan div-in icindeki ul-leri sececek</p>
+<pre class="language-css"><span class="rule">ul ~ p</span> {
+    <span class="property">color</span>: green;
+}</pre>
+<p>Bu kod ul-den sonra gelen her bir p-ni qirmizi reng edecek</p>
+<h1>Atribute Selector</h1>
+<pre class="language-css"><span class="rule">a[title]</span> {
+    <span class="property">text-decoration</span>: none;
+}</pre>
+<p>Bu kod yalniz title ozelliyine sahib olan link etiketini sececek.
+    Title ozelliyi olmayan hec bir link etiketi bu stili almayacaq
+</p>
+<pre class="language-css"><span class="rule">a[href="https://net.tutsplus.com"]</span> {
+    <span class="property">color</span>: red;
+}</pre>
+<p>Ancaq <i>https://net.tutsplus.com</i> bu adrese sahib olan linkler qirmizi reng olacaq</p>
+<pre class="language-css"><span class="rule">a[href^="http"]</span> {
+    <span class="property">padding-left</span>: 10px;
+}</pre>
+<p>Bu kod ancaq href-i http ile baslayan linkleri sececek</p>
+<h1>Pseudo Selectors</h1>
+<pre class="language-css"><span class="rule">a:link</span> {
+    <span class="property">color</span>: red;
+}</pre>
+<pre class="language-css"><span class="rule">a:visited</span> {
+    <span class="property">color</span>: grey;
+}</pre>
+<p>:link ziyaret edilmemis linkleri secir</p>
+<p>:visited ziyaret edilmis linkleri secir</p>
+<pre class="language-css"><span class="rule">input[type="radio"]:checked</span> {
+    <span class="property">border</span>: 1px solid grey;
+}</pre>
+<p>Her yoxlanilmis input elementini secir</p>
+<pre class="language-css"><span class="rule">p::after</span> {
+    <span class="property">content</span>: "....";
+}</pre>
+<p> :: after selector seçilmiş hər elementin məzmununa bir şey əlavə edir.</p>
+<pre class="language-css"><span class="rule">a:hover</span> {
+    <span class="property">text-decoration</span>: underline;
+    <span class="property">color</span>: blue;
+}</pre>
+<p>:hover selector-u ile elementinizin ustune sicani getirdikde vermek isdediyiniz css-i kodlasdira bilersiniz </p>
+<pre class="language-css"><span class="rule">*:not(p)</span> {
+    <span class="property">color</span>: blue;
+}</pre>
+<p> p tagindan basqa butun yazilar goy reng olacaq</p>
+<pre class="language-css"><span class="rule">p::firth-line</span> {
+    <span class="property">background-color</span>: yellow;
+}</pre>
+<p>::firth-line selector-u gosterdiyiniz secicinin birinci setrini secir</p>
+<h1>Nth Child and Type Selectors</h1>
+<pre class="language-css"><span class="rule">p:nth-child(n)</span> {
+    <span class="property">background-color</span>: red;
+}</pre>
+<p>Bu kod p-ler arasinda n-in yerine hansi reqemi yazsaq onu secir.Meselen n-in yerine 3 yazsaq 3-cu p-nin arxa rengi qirmizi olacaq</p>
+<pre class="language-css"><span class="rule">p:nth-last-child(n)</span> {
+    <span class="property">background-color</span>: red;
+}</pre>
+<p>Bu selector axirdan sayaraq n-ci usagi secir.Meselen n-in yerine 2 yazsaq axirdan 2-ci usagin background-color-u qirmizi olacaq</p>
+<pre class="language-css"><span class="rule">p:nth-of-type(n)</span> {
+    <span class="property">background-color</span>: grey;
+}</pre>
+<p>p:nth-of-type(n) selector-u p-nin n-ci usagini secir</p>
+<pre class="language-css"><span class="rule">p:nth-last-of-type(n)</span> {
+    <span class="property">background-color</span>: grey;
+}</pre>
+<p>Bu selector elementin axirdan n-ci usagini secir</p>
+<pre class="language-css"><span class="rule">ul li:firth-child</span> {
+    <span class="property">color</span>: greenyellow;
+}</pre>
+<p>Bu selector elementin birinci usagini secir</p>
+<pre class="language-css"><span class="rule">ul li:last-child</span> {
+    <span class="property">color</span>: yellow;
+}</pre>
+<p>Bu selector elementin axirinci usagini secir</p>
+<pre class="language-css"><span class="rule">p:only-child</span> {
+    <span class="property">background-color</span>: black;
+}</pre>
+<p>Bu selector elementin yegane usagini secir</p>
+<pre class="language-css"><span class="rule"></span> {
+    <span class="property">color</span>: yellow;
+}</pre>
+<p>Bu selector elementin axirinci usagini secir</p>
+</html>

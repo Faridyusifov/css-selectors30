@@ -1,0 +1,24 @@
+body {
+    font-family: 'Nerko One';
+    background-color: beige;
+}
+
+pre {
+    margin: 0;
+    tab-size: 2;
+}
+pre.language-css {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+}
+pre.language-css .rule {
+    color: red;
+}
+pre.language-css .property {
+    color: greenyellow;
+}
+
+* {
+    color: red;
+}
